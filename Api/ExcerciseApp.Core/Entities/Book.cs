@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExcerciseApp.Core.Entities
 {
-    class Book
+    public class Book
     {
         public int Id { get; set; }
         public string Author { get; set; }
