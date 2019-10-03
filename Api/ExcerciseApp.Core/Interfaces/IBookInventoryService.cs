@@ -1,6 +1,5 @@
-﻿using System;
+﻿using ExcerciseApp.Core.Entities;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ExcerciseApp.Core.Interfaces
 {
@@ -10,6 +9,5 @@ namespace ExcerciseApp.Core.Interfaces
         IEnumerable<Book> AddBook(Book book);
         Book EditBook(Book book, int bookId);
         BookDetails GetBookDetails(int bookId);
-
     }
 }

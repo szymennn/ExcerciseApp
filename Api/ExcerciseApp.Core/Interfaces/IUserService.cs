@@ -1,6 +1,5 @@
-﻿using System;
+﻿using ExcerciseApp.Core.Entities;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ExcerciseApp.Core.Interfaces
 {
