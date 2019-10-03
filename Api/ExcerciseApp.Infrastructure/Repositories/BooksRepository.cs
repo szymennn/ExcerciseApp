@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ExcerciseApp.Infrastructure.Repositories
+﻿namespace ExcerciseApp.Infrastructure.Repositories
 {
     class BooksRepository
     {
