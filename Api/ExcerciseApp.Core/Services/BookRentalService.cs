@@ -17,12 +17,14 @@ namespace ExcerciseApp.Core.Services
 
         public IEnumerable<Book> GetRentedBooks()
         {
-            return _rentalRepository.GetRentedBooks();
+            //TODO: implement that
+            throw new NotImplementedException();
         }
 
         public IEnumerable<User> GetRentingUsers()
         {
-            return _rentalRepository.GetRentingUsers();
+            //TODO: AMD THAT
+            throw new NotImplementedException();
         }
 
         public void PassBookIn(int bookId)

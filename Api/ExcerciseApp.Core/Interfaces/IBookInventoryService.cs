@@ -6,7 +6,7 @@ namespace ExcerciseApp.Core.Interfaces
     public interface IBookInventoryService
     {
         IEnumerable<Book> GetAll();
-        Book AddBook(Book book);
+        IEnumerable<Book> AddBook(Book book);
         Book EditBook(Book book, int bookId);
         BookDetails GetBookDetails(int bookId);
         Book GetBookById(int bookId);

@@ -6,7 +6,7 @@ namespace ExcerciseApp.Core.Entities
 {
     public class UserDetails
     {
-        IEnumerable<Book> RentedBooks { get; set; }
-        Borrow BorrowHistory { get; set; }
+        public IEnumerable<Book> RentedBooks { get; set; }
+        public IEnumerable<Borrow> BorrowHistory { get; set; }
     }
 }

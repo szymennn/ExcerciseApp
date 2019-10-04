@@ -31,8 +31,8 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult AddBook([FromBody] BookBindingModel bookModel)
         {
             var book = _mapper.Map<Book>(bookModel);
-            var addedBook = _bookInventory.AddBook(book);
-            var addedBookModel = _mapper.Map<BookApiModel>(addedBook);
+            var books = _bookInventory.AddBook(book);
+            var addedBookModel = _mapper.Map<IEnumerable<BookApiModel>>(books);
             return Ok(addedBookModel);
         }
 

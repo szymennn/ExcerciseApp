@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
 using ExcerciseApp.Api.MapperConfig;
 using ExcerciseApp.Core.Helpers;
+using ExcerciseApp.Core.Interfaces;
+using ExcerciseApp.Core.Services;
 using ExcerciseApp.Infrastructure.Data;
+using ExcerciseApp.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +34,13 @@ namespace ExcerciseApp.Api
 
             var mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            services.AddScoped<IBookInventoryRepository, BookInventoryRepository>();
+            services.AddScoped<IBookRentalRepository, BookRentalRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IBookRentalService, BookRentalService>();
+            services.AddScoped<IBookInventoryService, BookInventoryService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

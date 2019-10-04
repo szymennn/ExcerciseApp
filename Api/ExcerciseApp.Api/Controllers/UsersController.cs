@@ -35,9 +35,9 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult AddUser([FromBody] UserBindingModel userModel)
         {
             var user = _mapper.Map<User>(userModel);
-            var addedUser = _userService.AddUser(user);
-            var addedUserModel = _mapper.Map<UserApiModel>(addedUser);
-            return Ok(addedUserModel);
+            var users = _userService.AddUser(user);
+            var usersModel = _mapper.Map<UserApiModel>(users);
+            return Ok(usersModel);
         }
 
         [HttpPut("{userId}")]

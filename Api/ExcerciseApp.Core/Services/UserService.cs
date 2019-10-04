@@ -18,7 +18,7 @@ namespace ExcerciseApp.Core.Services
             _rentalRepository = rentalRepository;
             _inventoryRepository = inventoryRepository;
         }
-        public User AddUser(User user)
+        public IEnumerable<User> AddUser(User user)
         {
             return _userRepository.AddUser(user);
         }
@@ -40,19 +40,24 @@ namespace ExcerciseApp.Core.Services
 
         public UserDetails GetUserDetails(int userId)
         {
-            throw new NotImplementedException();  
+            return new UserDetails
+            {
+                RentedBooks = GetUserBooks(userId),
+                BorrowHistory = _rentalRepository.GetUserBorrowHistory(userId)
+            };
         }
+
 
         private IEnumerable<Book> GetUserBooks(int userId)
         {
-            throw new NotImplementedException();
+            var booksIds = _rentalRepository.GetUserBooksIds(userId);
+            var books = new List<Book>();
+            foreach(var bookId in booksIds)
+            {
+                books.Add(_inventoryRepository.GetBookById(bookId));
+            }
+            return books;
         }
-
-        private IEnumerable<Borrow> GetUserBorrows(int userId)
-        {
-            throw new NotImplementedException();
-        }
-            
 
     }
 }

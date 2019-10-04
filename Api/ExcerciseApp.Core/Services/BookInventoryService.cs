@@ -9,13 +9,15 @@ namespace ExcerciseApp.Core.Services
     public class BookInventoryService : IBookInventoryService
     {
         private readonly IBookInventoryRepository _inventoryRepository;
+        private readonly IBookRentalRepository _rentalRepository;
 
-        public BookInventoryService(IBookInventoryRepository booksRepository)
+        public BookInventoryService(IBookInventoryRepository booksRepository, IBookRentalRepository rentalRepository)
         {
             _inventoryRepository = booksRepository;
+            _rentalRepository = rentalRepository;
         }
 
-        public Book AddBook(Book book)
+        public IEnumerable<Book> AddBook(Book book)
         {
             return _inventoryRepository.AddBook(book);
         }
@@ -37,7 +39,20 @@ namespace ExcerciseApp.Core.Services
 
         public BookDetails GetBookDetails(int bookId)
         {
-            return _inventoryRepository.GetBookDetails(bookId);
+            var book = _inventoryRepository.GetBookById(bookId);
+            return new BookDetails
+            {
+                Author = book.Author,
+                Title = book.Title,
+                ReleaseDate = book.ReleaseDate,
+                ISBN = book.ISBN,
+                Count = book.Count,
+                AddDate = book.AddDate,
+                ModifiedDate = book.ModifiedDate,
+                IsRented = _rentalRepository.IsRented(bookId)
+            };
         }
+
+        
     }
 }
