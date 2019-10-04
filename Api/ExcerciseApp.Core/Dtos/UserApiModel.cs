@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExcerciseApp.Core.Entities
+namespace ExcerciseApp.Core.Dtos
 {
-    public class BookDetails
+    public class UserApiModel
     {
     }
 }

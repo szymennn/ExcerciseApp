@@ -1,7 +1,7 @@
 ﻿
 namespace ExcerciseApp.Core.Interfaces
 {
-    interface IReportService
+    public interface IReportService
     {
     }
 }
