@@ -8,6 +8,7 @@ using System.Collections.Generic;
 namespace ExcerciseApp.Api.Controllers
 {
     [Route("books")]
+    [ApiController]
     public class BooksController : ControllerBase
     {
         private readonly IMapper _mapper;
@@ -28,7 +29,7 @@ namespace ExcerciseApp.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBook([FromBody] BookBindingModel bookModel)
+        public IActionResult AddBook(BookBindingModel bookModel)
         {
             var book = _mapper.Map<Book>(bookModel);
             var books = _bookInventory.AddBook(book);
@@ -37,7 +38,7 @@ namespace ExcerciseApp.Api.Controllers
         }
 
         [HttpPut("{bookId}")]
-        public IActionResult EditBook([FromBody] BookBindingModel bookModel, [FromRoute] int bookId)
+        public IActionResult EditBook(BookBindingModel bookModel, [FromRoute] int bookId)
         {
             var book = _mapper.Map<Book>(bookModel);
             var updatedBook = _bookInventory.EditBook(book, bookId);

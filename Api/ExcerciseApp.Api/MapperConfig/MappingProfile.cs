@@ -19,6 +19,7 @@ namespace ExcerciseApp.Api.MapperConfig
             CreateMap<User, UserApiModel>();
             CreateMap<BorrowBindingModel, Borrow>();
             CreateMap<Borrow, BorrowApiModel>();
+            CreateMap<UserDetails, UserDetailsApiModel>();
         }
     }
 }

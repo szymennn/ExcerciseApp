@@ -47,7 +47,6 @@ namespace ExcerciseApp.Core.Services
             };
         }
 
-
         private IEnumerable<Book> GetUserBooks(int userId)
         {
             var booksIds = _rentalRepository.GetUserBooksIds(userId);

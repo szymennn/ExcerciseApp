@@ -9,5 +9,6 @@ namespace ExcerciseApp.Core.Interfaces
         IEnumerable<User> AddUser(User user);
         User EditUser(User user, int userId);
         IEnumerable<User> DeleteUser(int userId);
+        User GetUserById(int userId);
     }
 }

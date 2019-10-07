@@ -1,4 +1,6 @@
 ﻿using ExcerciseApp.Core.Entities;
+using ExcerciseApp.Core.Exceptions;
+using ExcerciseApp.Core.Helpers;
 using ExcerciseApp.Core.Interfaces;
 using ExcerciseApp.Infrastructure.Data;
 using System;
@@ -32,6 +34,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
             bookToEdit.ReleaseDate = book.ReleaseDate;
             bookToEdit.Title = book.Title;
             bookToEdit.BookGenreId = book.BookGenreId;
+            _context.SaveChanges();
             return bookToEdit;
         }
 
@@ -42,7 +45,12 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         public Book GetBookById(int bookId)
         {
-            return _context.Books.Find(bookId);
+            if(!_context.Books.Any(p => p.Id == bookId))
+            {
+                throw new ResourceNotFoundException(Constants.BookNotFoundMessage);
+            }
+            return _context.Books.FirstOrDefault(p => p.Id == bookId);
         }
+
     }
 }

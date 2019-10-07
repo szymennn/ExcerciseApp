@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExcerciseApp.Infrastructure.Migrations
 {
-    public partial class InitialSchema : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,10 +18,10 @@ namespace ExcerciseApp.Infrastructure.Migrations
                     Title = table.Column<string>(nullable: true),
                     ReleaseDate = table.Column<DateTime>(nullable: false),
                     ISBN = table.Column<string>(nullable: true),
-                    BookGenreId = table.Column<int>(nullable: false),
                     Count = table.Column<int>(nullable: false),
                     AddDate = table.Column<DateTime>(nullable: false),
-                    ModifiedDate = table.Column<DateTime>(nullable: false)
+                    ModifiedDate = table.Column<DateTime>(nullable: false),
+                    BookGenreId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,7 +62,8 @@ namespace ExcerciseApp.Infrastructure.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Username = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),

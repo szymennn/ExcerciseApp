@@ -8,23 +8,27 @@ namespace ExcerciseApp.Core.Services
 {
     public class BookRentalService : IBookRentalService
     {
-        private IBookRentalRepository _rentalRepository;
+        private readonly IBookRentalRepository _rentalRepository;
+        private readonly IBookInventoryRepository _inventoryRepository;
+        private readonly IUserRepository _userRepository;
 
-        public BookRentalService(IBookRentalRepository rentalRepository)
+        public BookRentalService(IBookRentalRepository rentalRepository, IBookInventoryRepository inventoryRepository, IUserRepository userRepository)
         {
             _rentalRepository = rentalRepository;
+            _inventoryRepository = inventoryRepository;
+            _userRepository = userRepository;
         }
 
         public IEnumerable<Book> GetRentedBooks()
         {
-            //TODO: implement that
-            throw new NotImplementedException();
+            var rentedBooksIds = _rentalRepository.GetRentedBooksIds();
+            return GetBooksByIds(rentedBooksIds);
         }
 
         public IEnumerable<User> GetRentingUsers()
         {
-            //TODO: AMD THAT
-            throw new NotImplementedException();
+            var usersIds = _rentalRepository.GetRentingUsersIds();
+            return GetUsersByIds(usersIds);
         }
 
         public void PassBookIn(int bookId)
@@ -32,9 +36,29 @@ namespace ExcerciseApp.Core.Services
             _rentalRepository.PassBookIn(bookId);
         }
 
-        public Borrow RentBook(Borrow borrow, int userId)
+        public Borrow RentBook(Borrow borrow)
         {
-            return _rentalRepository.RentBook(borrow, userId);
+            return _rentalRepository.RentBook(borrow);
+        }
+
+        private IEnumerable<Book> GetBooksByIds(IEnumerable<int> booksIds)
+        {
+            var books = new List<Book>();
+            foreach(var bookId in booksIds)
+            {
+                books.Add(_inventoryRepository.GetBookById(bookId));
+            }
+            return books;
+        }
+
+        private IEnumerable<User> GetUsersByIds(IEnumerable<int> usersIds)
+        {
+            var users = new List<User>();
+            foreach(var userId in usersIds)
+            {
+                users.Add(_userRepository.GetUserById(userId));
+            }
+            return users;
         }
     }
 }

@@ -49,7 +49,8 @@ namespace ExcerciseApp.Core.Services
                 Count = book.Count,
                 AddDate = book.AddDate,
                 ModifiedDate = book.ModifiedDate,
-                IsRented = _rentalRepository.IsRented(bookId)
+                IsRented = _rentalRepository.IsRented(bookId),
+                BorrowHistory = _rentalRepository.GetBookBorrowHistory(bookId)
             };
         }
 

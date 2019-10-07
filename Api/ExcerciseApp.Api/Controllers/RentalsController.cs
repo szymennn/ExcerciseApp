@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace ExcerciseApp.Api.Controllers
 {
     [Route("rentals")]
+    [ApiController]
     public class RentalsController : ControllerBase
     {
         private readonly IBookRentalService _rentalService;
@@ -38,20 +39,20 @@ namespace ExcerciseApp.Api.Controllers
             return Ok(usersModel);
         }
 
-        [HttpPost("rent/{userId}")]
-        public IActionResult RentBook([FromBody] BorrowBindingModel borrowModel, [FromRoute] int userId)
+        [HttpPost]
+        public IActionResult RentBook([FromBody] BorrowBindingModel borrowModel)
         {
             var borrow = _mapper.Map<Borrow>(borrowModel);
-            var addedBorrow = _rentalService.RentBook(borrow, userId);
+            var addedBorrow = _rentalService.RentBook(borrow);
             var addedBorrowModel = _mapper.Map<BorrowApiModel>(addedBorrow);
             return Ok(addedBorrowModel);
         }
 
-        [HttpPost]
-        public IActionResult PassBookIn([FromQuery] int bookId)
+        [HttpPost("{bookId}")]
+        public IActionResult PassBookIn([FromRoute] int bookId)
         {
             _rentalService.PassBookIn(bookId);
-            return Ok();
+            return NoContent();
         }
     }
 }

@@ -82,8 +82,9 @@ namespace ExcerciseApp.Infrastructure.Migrations
 
             modelBuilder.Entity("ExcerciseApp.Core.Entities.User", b =>
                 {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("AddDate");
 

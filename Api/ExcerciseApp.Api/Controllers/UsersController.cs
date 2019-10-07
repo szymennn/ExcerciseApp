@@ -12,6 +12,7 @@ namespace ExcerciseApp.Api.Controllers
 {
 
     [Route("users")]
+    [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -32,16 +33,16 @@ namespace ExcerciseApp.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddUser([FromBody] UserBindingModel userModel)
+        public IActionResult AddUser(UserBindingModel userModel)
         {
             var user = _mapper.Map<User>(userModel);
             var users = _userService.AddUser(user);
-            var usersModel = _mapper.Map<UserApiModel>(users);
+            var usersModel = _mapper.Map<IEnumerable<UserApiModel>>(users);
             return Ok(usersModel);
         }
 
         [HttpPut("{userId}")]
-        public IActionResult EditUser([FromBody] UserBindingModel userModel, [FromRoute] int userId)
+        public IActionResult EditUser(UserBindingModel userModel, [FromRoute] int userId)
         {
             var user = _mapper.Map<User>(userModel);
             var updatedUser = _userService.EditUser(user, userId);

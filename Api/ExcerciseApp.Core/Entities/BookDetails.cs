@@ -6,6 +6,7 @@ namespace ExcerciseApp.Core.Entities
 {
     public class BookDetails
     {
+        public int Id { get; set; }
         public string Author { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
@@ -14,5 +15,6 @@ namespace ExcerciseApp.Core.Entities
         public DateTime AddDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool IsRented { get; set; }
+        public IEnumerable<Borrow> BorrowHistory { get; set; }
     }
 }

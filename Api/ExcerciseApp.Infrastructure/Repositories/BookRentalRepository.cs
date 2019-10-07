@@ -1,4 +1,6 @@
 ﻿using ExcerciseApp.Core.Entities;
+using ExcerciseApp.Core.Exceptions;
+using ExcerciseApp.Core.Helpers;
 using ExcerciseApp.Core.Interfaces;
 using ExcerciseApp.Infrastructure.Data;
 using System;
@@ -10,7 +12,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
 {
     public class BookRentalRepository : IBookRentalRepository
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
 
         public BookRentalRepository(AppDbContext context)
         {
@@ -18,6 +20,10 @@ namespace ExcerciseApp.Infrastructure.Repositories
         }
         public IEnumerable<Borrow> GetBookBorrowHistory(int bookId)
         {
+            if (!BookExist(bookId))
+            {
+                throw new ResourceNotFoundException(Constants.BookNotFoundMessage);
+            }
             return _context.Borrows.Where(p => p.BookId == bookId).ToList();
         }
 
@@ -26,36 +32,72 @@ namespace ExcerciseApp.Infrastructure.Repositories
             return _context.Borrows.Where(p => p.IsReturned == false).Select(p => p.BookId).ToList();
         }
 
-        public IEnumerable<User> GetRentingUsers()
+        public IEnumerable<int> GetRentingUsersIds()
         {
-            throw new NotImplementedException();
+            return _context.Borrows.Where(p => p.IsReturned == false).ToList().Select(p => p.UserId).ToList();
         }
 
         public IEnumerable<int> GetUserBooksIds(int userId)
         {
+            if (!UserExist(userId))
+            {
+                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
+            }
             return _context.Borrows.Where(p => p.UserId == userId && p.IsReturned == false).Select(p => p.BookId).ToList();
         }
 
         public IEnumerable<Borrow> GetUserBorrowHistory(int userId)
         {
+            if (!UserExist(userId))
+            {
+                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
+            }
             return _context.Borrows.Where(p => p.UserId == userId).ToList();
         }
 
         public bool IsRented(int bookId)
         {
-            return !_context.Borrows.Find(bookId).IsReturned;
+            if (!BookExist(bookId))
+            {
+                throw new ResourceNotFoundException(Constants.BookNotFoundMessage);
+            }
+            return !_context.Borrows.LastOrDefault(p => p.BookId == bookId).IsReturned;
         }
 
         public void PassBookIn(int bookId)
         {
-            var book = _context.Borrows.Find(bookId);
+            if (!BookExist(bookId))
+            {
+                throw new ResourceNotFoundException(Constants.BookNotFoundMessage);
+            }
+            var book = _context.Borrows.LastOrDefault(p => p.BookId == bookId);
             book.IsReturned = true;
             _context.SaveChanges();
         }
 
-        public Borrow RentBook(Borrow borrow, int userId)
+        public Borrow RentBook(Borrow borrow)
         {
-            throw new NotImplementedException();
+            if(!_context.Borrows.Any(p => p.BookId == borrow.BookId))
+            {
+                _context.Borrows.Add(borrow);
+                _context.SaveChanges();
+            }
+            else if(!_context.Borrows.LastOrDefault(p => p.BookId == borrow.BookId).IsReturned)
+            {
+                throw new BookAlreadyRentedException(Constants.BookAlreadyRentedMessage);
+            }
+
+            return borrow;
+        }
+
+        private bool BookExist(int bookId)
+        {
+            return _context.Borrows.Any(p => p.BookId == bookId);
+        }
+
+        private bool UserExist(int userId)
+        {
+            return _context.Borrows.Any(p => p.UserId == userId);
         }
     }
 }

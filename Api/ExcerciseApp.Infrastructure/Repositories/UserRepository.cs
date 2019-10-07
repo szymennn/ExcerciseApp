@@ -1,4 +1,6 @@
 ﻿using ExcerciseApp.Core.Entities;
+using ExcerciseApp.Core.Exceptions;
+using ExcerciseApp.Core.Helpers;
 using ExcerciseApp.Core.Interfaces;
 using ExcerciseApp.Infrastructure.Data;
 using System;
@@ -10,7 +12,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
 
         public UserRepository(AppDbContext context)
         {
@@ -19,36 +21,69 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         public IEnumerable<User> DeleteUser(int userId)
         {
+            if (!Exist(userId))
+            {
+                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
+            }
             var user = _context.Users.Find(userId);
-            _context.Users.Remove(user);
+            user.IsActive = false;
             _context.SaveChanges();
-            return _context.Users.ToList();
+            return GetAllUsers();
         }
 
         public User EditUser(User user, int userId)
         {
-            var userToUpdate = _context.Users.Find(userId);
-            userToUpdate.BirthDate = user.BirthDate;
-            userToUpdate.Email = user.Email;
-            userToUpdate.FirstName = user.FirstName;
-            userToUpdate.LastName = user.LastName;
-            userToUpdate.ModifiedDate = DateTime.Now;
-            userToUpdate.Phone = user.Phone;
-            userToUpdate.Username = user.Username;
-            _context.SaveChanges();
-            return userToUpdate;
+            if (!Exist(userId))
+            {
+                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
+            }
+            return Edit(user, userId); 
         }
 
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.ToList();
+            return GetAllUsers();
+        }
+
+        public User GetUserById(int userId)
+        {
+            if (!Exist(userId))
+            {
+                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
+            }
+            return _context.Users.Find(userId);
         }
 
         IEnumerable<User> IUserRepository.AddUser(User user)
         {
+            user.IsActive = true;
             _context.Users.Add(user);
             _context.SaveChanges();
-            return _context.Users.ToList();
+            return GetAllUsers();
+        }
+
+        private IEnumerable<User> GetAllUsers()
+        {
+            return _context.Users.Where(p => p.IsActive).ToList();
+        }
+
+        private bool Exist(int userId)
+        {
+            return _context.Users.Any(p => p.Id == userId);
+        }
+
+        private User Edit(User userToEdit, int userId)
+        {
+            var user = _context.Users.Find(userId);
+            userToEdit.BirthDate = user.BirthDate;
+            userToEdit.Email = user.Email;
+            userToEdit.FirstName = user.FirstName;
+            userToEdit.LastName = user.LastName;
+            userToEdit.ModifiedDate = DateTime.Now;
+            userToEdit.Phone = user.Phone;
+            userToEdit.Username = user.Username;
+            _context.SaveChanges();
+            return userToEdit;
         }
     }
 }

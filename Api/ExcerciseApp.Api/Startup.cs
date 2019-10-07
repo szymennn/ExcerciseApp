@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ExcerciseApp.Api.Extensions;
 using ExcerciseApp.Api.MapperConfig;
 using ExcerciseApp.Core.Helpers;
 using ExcerciseApp.Core.Interfaces;
@@ -54,8 +55,15 @@ namespace ExcerciseApp.Api
             else
             {
                 app.UseHsts();
+                app.UseCustomExceptionHandler();
             }
-
+            app.UseCors(config =>
+            {
+                config.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .SetIsOriginAllowed((host) => true)
+                    .AllowCredentials();
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
         }
