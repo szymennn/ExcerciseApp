@@ -4,7 +4,9 @@ import { Typography, Table, TableBody, TableHead, TableCell, TableRow, Button, F
 import { AddIcon } from '@material-ui/icons/Add';
 import { connect } from 'react-redux';
 import axiosInstance from '../axios/config';
-import { UpdateUsersRequest } from '../actions/index';
+import { UpdateUsersRequest, DeleteUser, SetUpdateId, UpdateUserDetailsRequest } from '../actions/index';
+import { withRouter } from 'react-router-dom';
+import User from './User';
 
 function mapStateToProps(state){
     return {
@@ -20,6 +22,33 @@ function UserTable(props) {
         }
     })
 
+    function handleDelete(id){
+        props.dispatch(DeleteUser(id))
+    }
+
+    function handleAdd(){
+        props.history.push('/AddUser')
+    }
+
+    function handleEdit(id){
+        props.dispatch(SetUpdateId(id))
+        props.history.push('/EditUser')
+    }
+
+    function handleDetails(id){
+        props.dispatch(UpdateUserDetailsRequest(id))
+        props.history.push('/UserDetails')
+    }
+
+    const resultUsers = props.users.map((user, index) => {
+        let birthDate = new Date(user.birthDate)
+        let addDate = new Date(user.addDate)
+        let modifiedDate = new Date(user.modifiedDate)
+        return (
+            <User index={index} addDate={addDate} birthDate={birthDate} modifiedDate={modifiedDate} user={user} handleDelete={handleDelete} handleEdit={handleEdit} handleDetails={handleDetails}/>
+        )
+    })
+
     return (
      <Table>
         <TableHead>
@@ -32,32 +61,14 @@ function UserTable(props) {
             <TableCell>Phone</TableCell>
             <TableCell>Add Date</TableCell>
             <TableCell>Modified Date</TableCell>
-            <Button color="default" variant="outlined" >Add</Button>
+            <Button color="default" variant="outlined" onClick={handleAdd}>Add</Button>
             </TableRow>
         </TableHead>
         <TableBody>
-            {props.users.map(user => {
-                let birthDate = new Date(user.birthDate)
-                let addDate = new Date(user.addDate)
-                let modifiedDate = new Date(user.modifiedDate)
-                return (
-                    <TableRow key={user.id}>
-                        <TableCell>{user.id}</TableCell>
-                        <TableCell>{user.firstName}</TableCell>
-                        <TableCell>{user.lastName}</TableCell>
-                        <TableCell>{birthDate.toDateString()}</TableCell>
-                        <TableCell>{user.email}</TableCell>
-                        <TableCell>{user.phone}</TableCell>
-                        <TableCell>{addDate.toDateString()}</TableCell>
-                        <TableCell>{modifiedDate.toDateString()}</TableCell>
-                        <Button variant="contained" color="primary">Edit</Button>
-                        <Button variant="contained" color="secondary">Delete</Button>
-                    </TableRow>
-                )
-            })}
+            {resultUsers}
         </TableBody>
      </Table>
     );
 }
 
-export default connect(mapStateToProps)(UserTable)
+export default connect(mapStateToProps)(withRouter(UserTable))

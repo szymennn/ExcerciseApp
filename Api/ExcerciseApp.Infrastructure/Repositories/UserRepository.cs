@@ -75,15 +75,15 @@ namespace ExcerciseApp.Infrastructure.Repositories
         private User Edit(User userToEdit, int userId)
         {
             var user = _context.Users.Find(userId);
-            userToEdit.BirthDate = user.BirthDate;
-            userToEdit.Email = user.Email;
-            userToEdit.FirstName = user.FirstName;
-            userToEdit.LastName = user.LastName;
-            userToEdit.ModifiedDate = DateTime.Now;
-            userToEdit.Phone = user.Phone;
-            userToEdit.Username = user.Username;
+            user.BirthDate = userToEdit.BirthDate;
+            user.Email = userToEdit.Email;
+            user.FirstName = userToEdit.FirstName;
+            user.LastName = userToEdit.LastName;
+            user.ModifiedDate = DateTime.Now;
+            user.Phone = userToEdit.Phone;
+            user.Username = userToEdit.Username;
             _context.SaveChanges();
-            return userToEdit;
+            return user;
         }
     }
 }

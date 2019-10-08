@@ -1,1 +1,5 @@
 export const UPDATE_USERS = "UPDATE_USERS";
+export const UPDATE_USER = "UPDATE_USER";
+export const SET_UPDATE_ID = "SET_UPDATE_ID";
+export const UPDATE_USER_DETAILS = "UPDATE_USER_DETAILS";
+export const UPDATE_BOOKS = "UPDATE_BOOKS";

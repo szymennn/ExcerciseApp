@@ -39,19 +39,11 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         public IEnumerable<int> GetUserBooksIds(int userId)
         {
-            if (!UserExist(userId))
-            {
-                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
-            }
             return _context.Borrows.Where(p => p.UserId == userId && p.IsReturned == false).Select(p => p.BookId).ToList();
         }
 
         public IEnumerable<Borrow> GetUserBorrowHistory(int userId)
         {
-            if (!UserExist(userId))
-            {
-                throw new ResourceNotFoundException(Constants.UserNotFoundMessage);
-            }
             return _context.Borrows.Where(p => p.UserId == userId).ToList();
         }
 
@@ -77,15 +69,13 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         public Borrow RentBook(Borrow borrow)
         {
-            if(!_context.Borrows.Any(p => p.BookId == borrow.BookId))
-            {
-                _context.Borrows.Add(borrow);
-                _context.SaveChanges();
-            }
-            else if(!_context.Borrows.LastOrDefault(p => p.BookId == borrow.BookId).IsReturned)
+            if(!_context.Borrows.LastOrDefault(p => p.BookId == borrow.BookId).IsReturned)
             {
                 throw new BookAlreadyRentedException(Constants.BookAlreadyRentedMessage);
             }
+
+            _context.Borrows.Add(borrow);
+            _context.SaveChanges();
 
             return borrow;
         }
