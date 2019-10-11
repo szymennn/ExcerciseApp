@@ -49,14 +49,14 @@ export default function UserForm(props) {
                 fullWidth
             />
             <TextField
-                error={errors.bookGenreId && touched.bookGenreId}
-                id="bookGenreId"
-                name="bookGenreId"
-                label="bookGenreId"
+                error={errors.bookGenre && touched.bookGenre}
+                id="bookGenre"
+                name="bookGenre"
+                label="bookGenre"
                 value={values.bookGenreId}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                helperText={(errors.bookGenreId && touched.bookGenreId) && errors.bookGenreId} 
+                helperText={(errors.bookGenre && touched.bookGenre) && errors.bookGenre} 
                 InputLabelProps={{
                     shrink: true,
                   }}

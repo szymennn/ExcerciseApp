@@ -12,13 +12,19 @@ namespace ExcerciseApp.Infrastructure.Repositories
 {
     public class BookInventoryRepository : IBookInventoryRepository
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
         public BookInventoryRepository(AppDbContext context)
         {
             _context = context;
         }
-        public IEnumerable<Book> AddBook(Book book)
+        public IEnumerable<Book> AddBook(Book book, string bookGenre)
         {
+            var genre = _context.Genres.FirstOrDefault(p => p.Name == bookGenre);
+            if(genre == null)
+            {
+                throw new ResourceNotFoundException(Constants.GenreNotFound);
+            }
+            book.BookGenreId = genre.Id;
             _context.Books.Add(book);
             _context.SaveChanges();
             return _context.Books.ToList();
@@ -51,6 +57,5 @@ namespace ExcerciseApp.Infrastructure.Repositories
             }
             return _context.Books.FirstOrDefault(p => p.Id == bookId);
         }
-
     }
 }

@@ -54,7 +54,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
             return _context.Users.Find(userId);
         }
 
-        IEnumerable<User> IUserRepository.AddUser(User user)
+        public IEnumerable<User> AddUser(User user)
         {
             user.IsActive = true;
             _context.Users.Add(user);
@@ -69,7 +69,11 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         private bool Exist(int userId)
         {
-            return _context.Users.Any(p => p.Id == userId);
+            if (_context.Users.Any(p => p.Id == userId))
+            {
+                return _context.Users.Find(userId).IsActive;
+            }
+            return false;
         }
 
         private User Edit(User userToEdit, int userId)
@@ -79,7 +83,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
             user.Email = userToEdit.Email;
             user.FirstName = userToEdit.FirstName;
             user.LastName = userToEdit.LastName;
-            user.ModifiedDate = DateTime.Now;
+            user.ModifiedDate = userToEdit.ModifiedDate;
             user.Phone = userToEdit.Phone;
             user.Username = userToEdit.Username;
             _context.SaveChanges();

@@ -5,10 +5,10 @@ namespace ExcerciseApp.Core.Interfaces
 {
     public interface IUserService
     {
-        IEnumerable<User> GetAll();
-        IEnumerable<User> AddUser(User user);
-        User EditUser(User user, int userId);
-        IEnumerable<User> DeleteUser(int userId);
+        IEnumerable<UserDetails> GetAll();
+        IEnumerable<UserDetails> AddUser(User user);
+        UserDetails EditUser(User user, int userId);
+        IEnumerable<UserDetails> DeleteUser(int userId);
         UserDetails GetUserDetails(int userId);
     }
 }

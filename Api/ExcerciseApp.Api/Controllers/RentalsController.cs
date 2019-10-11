@@ -43,16 +43,17 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult RentBook([FromBody] BorrowBindingModel borrowModel)
         {
             var borrow = _mapper.Map<Borrow>(borrowModel);
-            var addedBorrow = _rentalService.RentBook(borrow);
-            var addedBorrowModel = _mapper.Map<BorrowApiModel>(addedBorrow);
-            return Ok(addedBorrowModel);
+            var rentedBook = _rentalService.RentBook(borrow);
+            var rentedBookModel = _mapper.Map<BookApiModel>(rentedBook);
+            return Ok(rentedBookModel);
         }
 
         [HttpPost("{bookId}")]
         public IActionResult PassBookIn([FromRoute] int bookId)
         {
-            _rentalService.PassBookIn(bookId);
-            return NoContent();
+            var rentedBooks = _rentalService.PassBookIn(bookId);
+            var rentedBooksModel = _mapper.Map<IEnumerable<BookApiModel>>(rentedBooks);
+            return Ok(rentedBooksModel);
         }
     }
 }

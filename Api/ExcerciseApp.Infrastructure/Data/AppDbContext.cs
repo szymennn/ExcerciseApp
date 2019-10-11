@@ -16,6 +16,5 @@ namespace ExcerciseApp.Infrastructure.Data
         public DbSet<Borrow> Borrows { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<DictBookGenre> Genres { get; set; }
-
     }
 }

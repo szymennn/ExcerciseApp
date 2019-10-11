@@ -15,6 +15,7 @@ namespace ExcerciseApp.Core.Entities
         public DateTime AddDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool IsRented { get; set; }
+        public string BookGenre { get; set; }
         public IEnumerable<Borrow> BorrowHistory { get; set; }
     }
 }

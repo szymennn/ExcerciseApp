@@ -6,6 +6,7 @@ namespace ExcerciseApp.Core.Dtos
 {
     public class BookDetailsApiModel
     {
+        public int Id { get; set; }
         public string Author { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
@@ -14,6 +15,7 @@ namespace ExcerciseApp.Core.Dtos
         public DateTime AddDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool IsRented { get; set; }
+        public string BookGenre { get; set; }
         public IEnumerable<BorrowApiModel> BorrowHistory { get; set; }
     }
 }

@@ -31,14 +31,14 @@ namespace ExcerciseApp.Core.Services
             return GetUsersByIds(usersIds);
         }
 
-        public void PassBookIn(int bookId)
+        public Book RentBook(Borrow borrow)
         {
-            _rentalRepository.PassBookIn(bookId);
+            _rentalRepository.RentBook(borrow);
+            return _inventoryRepository.GetBookById(borrow.BookId);
         }
-
-        public Borrow RentBook(Borrow borrow)
+        public IEnumerable<Book> PassBookIn(int bookId)
         {
-            return _rentalRepository.RentBook(borrow);
+            return GetBooksByIds(_rentalRepository.PassBookIn(bookId));
         }
 
         private IEnumerable<Book> GetBooksByIds(IEnumerable<int> booksIds)
@@ -60,5 +60,7 @@ namespace ExcerciseApp.Core.Services
             }
             return users;
         }
+
+
     }
 }

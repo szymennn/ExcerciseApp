@@ -8,7 +8,7 @@ namespace ExcerciseApp.Core.Interfaces
     public interface IBookInventoryRepository
     {
         IEnumerable<Book> GetAll();
-        IEnumerable<Book> AddBook(Book book);
+        IEnumerable<Book> AddBook(Book book, string bookGenre);
         Book EditBook(Book book, int bookId);
         Book GetBookById(int bookId);
     }

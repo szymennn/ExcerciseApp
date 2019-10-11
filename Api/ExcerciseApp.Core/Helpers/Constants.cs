@@ -15,5 +15,7 @@ namespace ExcerciseApp.Core.Helpers
         public const string BookNotFoundMessage = "There's no book with that id";
         public const string BadRequest = "Bad Request";
         public const string BookAlreadyRentedMessage = "That book is already rented";
+        public const string UserNotActiveMessage = "User is not active";
+        public const string GenreNotFound = "Genre not found";
     }
 }

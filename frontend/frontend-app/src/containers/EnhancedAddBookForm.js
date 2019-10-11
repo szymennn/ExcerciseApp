@@ -1,6 +1,7 @@
 import { withFormik, yupToFormErrors } from 'formik';
 import * as Yup from 'yup';
 import BookForm from './BookForm';
+import { AddBook } from '../actions';
 
 const EnhancedAddBookForm = withFormik({
     mapPropsToValues(props){
@@ -9,7 +10,7 @@ const EnhancedAddBookForm = withFormik({
             title: '',
             isbn: '',
             count: '',
-            bookGenreId: '',
+            bookGenre: '',
             releaseDate: '',
             addDate: '',
             modifiedDate: '',
@@ -21,19 +22,20 @@ const EnhancedAddBookForm = withFormik({
             title: values.title,
             isbn: values.isbn,
             count: values.count,
-            bookGenreId: values.bookGenreId,
+            bookGenre: values.bookGenre,
             releaseDate: values.releaseDate,
             addDate: values.addDate,
             modifiedDate: values.modifiedDate,
         }
-        props.dispatch()
+        props.dispatch(AddBook(book))
+        props.redirect('/Books')
     },
     validationSchema: Yup.object().shape({
         author: Yup.string().required(),
         title: Yup.string().required(),
         isbn: Yup.string().required(),
         count: Yup.number().required(),
-        bookGenreId: Yup.number().required(),
+        bookGenre: Yup.string().required(),
         releaseDate: Yup.date().required(),
         addDate: Yup.date().required(),
         modifiedDate: Yup.date().required(),

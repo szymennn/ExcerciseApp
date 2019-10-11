@@ -3,6 +3,7 @@ using ExcerciseApp.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ExcerciseApp.Core.Services
 {
@@ -10,26 +11,28 @@ namespace ExcerciseApp.Core.Services
     {
         private readonly IBookInventoryRepository _inventoryRepository;
         private readonly IBookRentalRepository _rentalRepository;
+        private readonly IGenresRepository _genresRepository;
 
-        public BookInventoryService(IBookInventoryRepository booksRepository, IBookRentalRepository rentalRepository)
+        public BookInventoryService(IBookInventoryRepository booksRepository, IBookRentalRepository rentalRepository, IGenresRepository genresRepository)
         {
             _inventoryRepository = booksRepository;
             _rentalRepository = rentalRepository;
+            _genresRepository = genresRepository;
         }
 
-        public IEnumerable<Book> AddBook(Book book)
+        public IEnumerable<BookDetails> AddBook(Book book, string bookGenre)
         {
-            return _inventoryRepository.AddBook(book);
+            return GetBooksDetails(_inventoryRepository.AddBook(book, bookGenre));
         }
 
-        public Book EditBook(Book book, int bookId)
+        public BookDetails EditBook(Book book, int bookId)
         {
-            return _inventoryRepository.EditBook(book, bookId);
+            return GetDetails(_inventoryRepository.EditBook(book, bookId).Id);
         }
 
-        public IEnumerable<Book> GetAll()
+        public IEnumerable<BookDetails> GetAll()
         {
-            return _inventoryRepository.GetAll();
+            return GetBooksDetails(_inventoryRepository.GetAll().ToList());
         }
 
         public Book GetBookById(int bookId)
@@ -39,9 +42,25 @@ namespace ExcerciseApp.Core.Services
 
         public BookDetails GetBookDetails(int bookId)
         {
+            return GetDetails(bookId);
+        }
+
+        private IEnumerable<BookDetails> GetBooksDetails(IEnumerable<Book> books)
+        {
+            var booksDetails = new List<BookDetails>();
+            foreach (var book in books)
+            {
+                booksDetails.Add(GetDetails(book.Id));
+            }
+            return booksDetails;
+        }
+
+        private BookDetails GetDetails(int bookId)
+        {
             var book = _inventoryRepository.GetBookById(bookId);
             return new BookDetails
             {
+                Id = book.Id,
                 Author = book.Author,
                 Title = book.Title,
                 ReleaseDate = book.ReleaseDate,
@@ -49,11 +68,11 @@ namespace ExcerciseApp.Core.Services
                 Count = book.Count,
                 AddDate = book.AddDate,
                 ModifiedDate = book.ModifiedDate,
+                BookGenre = _genresRepository.GetGenreName(book.BookGenreId),
                 IsRented = _rentalRepository.IsRented(bookId),
                 BorrowHistory = _rentalRepository.GetBookBorrowHistory(bookId)
             };
         }
 
-        
     }
 }

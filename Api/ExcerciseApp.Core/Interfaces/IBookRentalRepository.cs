@@ -7,8 +7,8 @@ namespace ExcerciseApp.Core.Interfaces
 {
     public interface IBookRentalRepository
     {
-        Borrow RentBook(Borrow borrow);
-        void PassBookIn(int bookId);
+        void RentBook(Borrow borrow);
+        IEnumerable<int> PassBookIn(int bookId);
         IEnumerable<int> GetRentedBooksIds();
         IEnumerable<int> GetRentingUsersIds();
         IEnumerable<int> GetUserBooksIds(int userId);

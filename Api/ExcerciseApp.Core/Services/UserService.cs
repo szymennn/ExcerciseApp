@@ -18,30 +18,56 @@ namespace ExcerciseApp.Core.Services
             _rentalRepository = rentalRepository;
             _inventoryRepository = inventoryRepository;
         }
-        public IEnumerable<User> AddUser(User user)
+        public IEnumerable<UserDetails> AddUser(User user)
         {
-            return _userRepository.AddUser(user);
+            return GetUsersDetails(_userRepository.AddUser(user));
         }
 
-        public IEnumerable<User> DeleteUser(int userId)
+        public IEnumerable<UserDetails> DeleteUser(int userId)
         {
-            return _userRepository.DeleteUser(userId);
+            return GetUsersDetails(_userRepository.DeleteUser(userId));
         }
 
-        public User EditUser(User user, int userId)
+        public UserDetails EditUser(User user, int userId)
         {
-            return _userRepository.EditUser(user, userId);
+            return GetDetails(_userRepository.EditUser(user, userId).Id);
         }
 
-        public IEnumerable<User> GetAll()
+        public IEnumerable<UserDetails> GetAll()
         {
-            return _userRepository.GetAll();
+            return GetUsersDetails(_userRepository.GetAll());
         }
 
         public UserDetails GetUserDetails(int userId)
         {
+            return GetDetails(userId);
+        }
+
+        private IEnumerable<UserDetails> GetUsersDetails(IEnumerable<User> users)
+        {
+            var usersDetails = new List<UserDetails>();
+            foreach (var user in users)
+            {
+                usersDetails.Add(GetDetails(user.Id));
+            }
+            return usersDetails;
+        }
+
+        private UserDetails GetDetails(int userId)
+        {
+            var user = _userRepository.GetUserById(userId);
             return new UserDetails
             {
+                Id = user.Id,
+                AddDate = user.AddDate,
+                BirthDate = user.BirthDate,
+                ModifiedDate = user.ModifiedDate,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                IsActive = user.IsActive,
+                Phone = user.Phone,
+                Username = user.Username,
                 RentedBooks = GetUserBooks(userId),
                 BorrowHistory = _rentalRepository.GetUserBorrowHistory(userId)
             };

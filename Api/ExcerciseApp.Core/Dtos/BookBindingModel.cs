@@ -22,7 +22,6 @@ namespace ExcerciseApp.Core.Dtos
         [Required]
         public DateTime ModifiedDate { get; set; }
         [Required]
-        [Range(1, 5)]
-        public int BookGenreId { get; set; }
+        public string BookGenre { get; set; }
     }
 }

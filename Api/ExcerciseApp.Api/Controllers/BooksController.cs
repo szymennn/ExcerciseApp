@@ -24,7 +24,7 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult GetAllBooks()
         {
             var books = _bookInventory.GetAll();
-            var booksModel = _mapper.Map<IEnumerable<BookApiModel>>(books);
+            var booksModel = _mapper.Map<IEnumerable<BookDetailsApiModel>>(books);
             return Ok(booksModel);
         }
 
@@ -32,8 +32,8 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult AddBook(BookBindingModel bookModel)
         {
             var book = _mapper.Map<Book>(bookModel);
-            var books = _bookInventory.AddBook(book);
-            var addedBookModel = _mapper.Map<IEnumerable<BookApiModel>>(books);
+            var books = _bookInventory.AddBook(book, bookModel.BookGenre);
+            var addedBookModel = _mapper.Map<IEnumerable<BookDetailsApiModel>>(books);
             return Ok(addedBookModel);
         }
 
@@ -42,17 +42,16 @@ namespace ExcerciseApp.Api.Controllers
         {
             var book = _mapper.Map<Book>(bookModel);
             var updatedBook = _bookInventory.EditBook(book, bookId);
-            var updatedBookModel = _mapper.Map<BookApiModel>(updatedBook);
+            var updatedBookModel = _mapper.Map<BookDetailsApiModel>(updatedBook);
             return Ok(updatedBookModel);
         }
 
-        [HttpGet("{bookId}")]
+        [HttpGet("details/{bookId}")]
         public IActionResult GetBookDetails([FromRoute] int bookId)
         {
             var bookDetails = _bookInventory.GetBookDetails(bookId);
             var bookDetailsModel = _mapper.Map<BookDetailsApiModel>(bookDetails);
             return Ok(bookDetailsModel);
         }
-
     }
 }

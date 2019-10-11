@@ -1,12 +1,15 @@
+
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Table, TableBody, TableHead, TableCell, TableRow, makeStyles, Paper } from '@material-ui/core';
+import { Table, TableBody, TableHead, TableCell, TableRow, Paper, makeStyles } from '@material-ui/core';
 
 function mapStateToProps(state){
     console.log(state)
     return {
-        userDetails: state.users.userDetails
+        books: state.books.books,
+        id: state.ids.updateId
     }
 }
 
@@ -20,28 +23,13 @@ const useStyles = makeStyles({
     },
   });
 
-function UserDetails(props){
-    const classes = useStyles()
+function BookDetails(props){
+    const classes = useStyles();
+    const book = props.books.find((book) => {
+        return book.id === props.id
+    })
 
-    const userBooks = props.userDetails.rentedBooks.map((book, index) => {
-        let addDate = new Date(book.addDate)
-        let releaseDate = new Date(book.releaseDate)
-        let modifiedDate = new Date(book.modifiedDate)
-return (
-    <TableRow key={book.id}>
-    <TableCell>{book.id}</TableCell>
-    <TableCell>{book.author}</TableCell>
-    <TableCell>{book.title}</TableCell>
-    <TableCell>{releaseDate.toDateString()}</TableCell>
-    <TableCell>{book.isbn}</TableCell>
-    <TableCell>{book.count}</TableCell>
-    <TableCell>{addDate.toDateString()}</TableCell>
-    <TableCell>{modifiedDate.toDateString()}</TableCell>
-    <TableCell>{book.bookGenreId}</TableCell>
-</TableRow>
-    )})
-
-    const userRentals = props.userDetails.borrowHistory.map((borrow, index) => {
+    const bookDetails = book.borrowHistory.map((borrow, index) => {
         let fromDate = new Date(borrow.fromDate)
         let toDate = new Date(borrow.toDate)
         return(
@@ -57,7 +45,7 @@ return (
     return(
         <Paper className={classes.root}>
         <Table className={classes.table}>
-        <TableHead >
+        <TableHead>
             <TableRow>
             <TableCell>Id</TableCell>
             <TableCell>Author</TableCell>
@@ -71,7 +59,17 @@ return (
             </TableRow>
         </TableHead>
         <TableBody>
-            {userBooks}
+        <TableRow>
+            <TableCell>{book.id}</TableCell>
+            <TableCell>{book.author}</TableCell>
+            <TableCell>{book.title}</TableCell>
+            <TableCell>{book.releaseDate}</TableCell>
+            <TableCell>{book.isbn}</TableCell>
+            <TableCell>{book.count}</TableCell>
+            <TableCell>{book.addDate}</TableCell>
+            <TableCell>{book.modifiedDate}</TableCell>
+            <TableCell>{book.bookGenreId}</TableCell>
+            </TableRow>
         </TableBody>
      </Table>
              <Table>
@@ -84,11 +82,11 @@ return (
                  </TableRow>
              </TableHead>
              <TableBody>
-                 {userRentals}
+                 {bookDetails}
              </TableBody>
           </Table>
           </Paper>
     )
 }
 
-export default connect(mapStateToProps)(withRouter(UserDetails))
+export default connect(mapStateToProps)(withRouter(BookDetails))

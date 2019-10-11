@@ -42,6 +42,7 @@ namespace ExcerciseApp.Api
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBookRentalService, BookRentalService>();
             services.AddScoped<IBookInventoryService, BookInventoryService>();
+            services.AddScoped<IGenresRepository, GenresRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

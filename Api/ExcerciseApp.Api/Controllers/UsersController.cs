@@ -28,7 +28,7 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult GetAllUsers()
         {
             var users = _userService.GetAll();
-            var usersModel = _mapper.Map<IEnumerable<UserApiModel>>(users);
+            var usersModel = _mapper.Map<IEnumerable<UserDetailsApiModel>>(users);
             return Ok(usersModel);
         }
 
@@ -37,7 +37,7 @@ namespace ExcerciseApp.Api.Controllers
         {
             var user = _mapper.Map<User>(userModel);
             var users = _userService.AddUser(user);
-            var usersModel = _mapper.Map<IEnumerable<UserApiModel>>(users);
+            var usersModel = _mapper.Map<IEnumerable<UserDetailsApiModel>>(users);
             return Ok(usersModel);
         }
 
@@ -46,7 +46,7 @@ namespace ExcerciseApp.Api.Controllers
         {
             var user = _mapper.Map<User>(userModel);
             var updatedUser = _userService.EditUser(user, userId);
-            var updatedUserModel = _mapper.Map<UserApiModel>(updatedUser);
+            var updatedUserModel = _mapper.Map<UserDetailsApiModel>(updatedUser);
             return Ok(updatedUserModel);
         }
 
@@ -54,7 +54,7 @@ namespace ExcerciseApp.Api.Controllers
         public IActionResult DeleteUser([FromRoute] int userId)
         {
             var users = _userService.DeleteUser(userId);
-            var usersModel = _mapper.Map<IEnumerable<UserApiModel>>(users);
+            var usersModel = _mapper.Map<IEnumerable<UserDetailsApiModel>>(users);
             return Ok(usersModel);
         }
 

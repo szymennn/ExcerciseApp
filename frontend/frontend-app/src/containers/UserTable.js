@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import MaterialTable from 'material-table';
-import { Typography, Table, TableBody, TableHead, TableCell, TableRow, Button, Fab, makeStyles } from '@material-ui/core';
-import { AddIcon } from '@material-ui/icons/Add';
+import { Typography, Table, TableBody, TableHead, TableCell, TableRow, Button, Fab, makeStyles, Paper } from '@material-ui/core';
+import FilterListIcon from '@material-ui/icons/FilterList';
 import { connect } from 'react-redux';
 import axiosInstance from '../axios/config';
-import { UpdateUsersRequest, DeleteUser, SetUpdateId, UpdateUserDetailsRequest } from '../actions/index';
+import { UpdateUsersRequest, DeleteUser, SetUpdateId, UpdateUserDetailsRequest, SortUsers } from '../actions/index';
 import { withRouter } from 'react-router-dom';
 import User from './User';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import SortIcon from '@material-ui/icons/Sort';
 
 function mapStateToProps(state){
     return {
@@ -14,13 +17,22 @@ function mapStateToProps(state){
     }
 }
 
+const useStyles = makeStyles({
+    root: {
+      width: '100%',
+      overflowX: 'auto',
+    },
+    table: {
+      minWidth: 650,
+    },
+  });
+
 function UserTable(props) {
+    const classes = useStyles();
 
     useEffect(() => {
-        if(props.users.length === 0){
             props.dispatch(UpdateUsersRequest())
-        }
-    })
+    },[])
 
     function handleDelete(id){
         props.dispatch(DeleteUser(id))
@@ -36,9 +48,13 @@ function UserTable(props) {
     }
 
     function handleDetails(id){
-        props.dispatch(UpdateUserDetailsRequest(id))
-        props.history.push('/UserDetails')
+        props.dispatch(UpdateUserDetailsRequest(id, props.history.push))
     }
+
+    function handleSort(){
+        props.dispatch(SortUsers())
+    }
+
 
     const resultUsers = props.users.map((user, index) => {
         let birthDate = new Date(user.birthDate)
@@ -49,8 +65,14 @@ function UserTable(props) {
         )
     })
 
+    const selectFilter = [
+        {Name: 'estado'},
+        {Name: 'something'}
+    ]
+
     return (
-     <Table>
+    <Paper className={classes.root}>
+     <Table selectFilter={selectFilter} className={classes.table} aria-label="Users">
         <TableHead>
             <TableRow>
             <TableCell>Id</TableCell>
@@ -61,13 +83,25 @@ function UserTable(props) {
             <TableCell>Phone</TableCell>
             <TableCell>Add Date</TableCell>
             <TableCell>Modified Date</TableCell>
-            <Button color="default" variant="outlined" onClick={handleAdd}>Add</Button>
+            <TableCell>
+                <IconButton onClick={handleAdd}>
+                    <AddIcon>
+                    </AddIcon>
+                </IconButton>
+                </TableCell>
+            <TableCell>
+                <IconButton onClick={handleSort}>
+                    <SortIcon>
+                    </SortIcon>
+                </IconButton>
+            </TableCell>
             </TableRow>
         </TableHead>
         <TableBody>
             {resultUsers}
         </TableBody>
      </Table>
+     </Paper>
     );
 }
 
