@@ -47,12 +47,7 @@ namespace ExcerciseApp.Core.Services
 
         private IEnumerable<BookDetails> GetBooksDetails(IEnumerable<Book> books)
         {
-            var booksDetails = new List<BookDetails>();
-            foreach (var book in books)
-            {
-                booksDetails.Add(GetDetails(book.Id));
-            }
-            return booksDetails;
+            return books.Select(book => GetDetails(book.Id)).ToList();
         }
 
         private BookDetails GetDetails(int bookId)

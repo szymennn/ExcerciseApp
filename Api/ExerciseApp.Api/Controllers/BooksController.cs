@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using ExcerciseApp.Core.Dtos;
 using ExcerciseApp.Core.Entities;
 using ExcerciseApp.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using ExcerciseApp.Core.Dtos;
 
 namespace ExcerciseApp.Api.Controllers
 {

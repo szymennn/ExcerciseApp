@@ -7,7 +7,7 @@ namespace ExcerciseApp.Core.Helpers
     public static class Constants
     {
         public const string ConnectionString = "AppDbConnectionString";
-        public const string MigrationsAssembly = "ExcerciseApp.Infrastructure";
+        public const string MigrationsAssembly = "ExerciseApp.Infrastructure";
         public const string NotFound = "Not Found";
         public const string InternalServerError = "Internal Server Error";
         public const string InterServerErrorDetail = "An unexcpected error occured";

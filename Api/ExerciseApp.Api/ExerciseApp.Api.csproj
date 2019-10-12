@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>ExcerciseApp.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExcerciseApp.Core\ExcerciseApp.Core.csproj" />
-    <ProjectReference Include="..\ExcerciseApp.Infrastructure\ExcerciseApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\ExerciseApp.Core\ExerciseApp.Core.csproj" />
+    <ProjectReference Include="..\ExerciseApp.Infrastructure\ExerciseApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

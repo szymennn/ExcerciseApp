@@ -2,6 +2,7 @@
 using ExcerciseApp.Core.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ExcerciseApp.Core.Services
@@ -43,22 +44,12 @@ namespace ExcerciseApp.Core.Services
 
         private IEnumerable<Book> GetBooksByIds(IEnumerable<int> booksIds)
         {
-            var books = new List<Book>();
-            foreach(var bookId in booksIds)
-            {
-                books.Add(_inventoryRepository.GetBookById(bookId));
-            }
-            return books;
+            return booksIds.Select(bookId => _inventoryRepository.GetBookById(bookId)).ToList();
         }
 
         private IEnumerable<User> GetUsersByIds(IEnumerable<int> usersIds)
         {
-            var users = new List<User>();
-            foreach(var userId in usersIds)
-            {
-                users.Add(_userRepository.GetUserById(userId));
-            }
-            return users;
+            return usersIds.Select(userId => _userRepository.GetUserById(userId)).ToList();
         }
 
 

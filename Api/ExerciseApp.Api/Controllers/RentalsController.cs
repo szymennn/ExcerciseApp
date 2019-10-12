@@ -1,14 +1,11 @@
 ﻿using AutoMapper;
-using ExcerciseApp.Core.Dtos;
 using ExcerciseApp.Core.Entities;
 using ExcerciseApp.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ExcerciseApp.Core.Dtos;
 
-namespace ExcerciseApp.Api.Controllers
+namespace ExerciseApp.Api.Controllers
 {
     [Route("rentals")]
     [ApiController]
