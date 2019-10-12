@@ -21,7 +21,7 @@ namespace ExcerciseApp.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ExcerciseApp.Core.Entities.Book", b =>
+            modelBuilder.Entity("ExerciseApp.Core.Entities.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace ExcerciseApp.Infrastructure.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("ExcerciseApp.Core.Entities.Borrow", b =>
+            modelBuilder.Entity("ExerciseApp.Core.Entities.Borrow", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +69,7 @@ namespace ExcerciseApp.Infrastructure.Migrations
                     b.ToTable("Borrows");
                 });
 
-            modelBuilder.Entity("ExcerciseApp.Core.Entities.DictBookGenre", b =>
+            modelBuilder.Entity("ExerciseApp.Core.Entities.DictBookGenre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -82,7 +82,7 @@ namespace ExcerciseApp.Infrastructure.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("ExcerciseApp.Core.Entities.User", b =>
+            modelBuilder.Entity("ExerciseApp.Core.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

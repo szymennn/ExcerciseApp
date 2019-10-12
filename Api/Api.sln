@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcerciseApp.Core", "ExcerciseApp.Core\ExcerciseApp.Core.csproj", "{BF1243DA-F193-42E0-94B7-8E33BD5F7AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciseApp.Core", "ExerciseApp.Core\ExerciseApp.Core.csproj", "{BF1243DA-F193-42E0-94B7-8E33BD5F7AF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcerciseApp.Infrastructure", "ExcerciseApp.Infrastructure\ExcerciseApp.Infrastructure.csproj", "{25441BB2-BD14-4FF7-9DA3-E70B9D4BF30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciseApp.Infrastructure", "ExerciseApp.Infrastructure\ExerciseApp.Infrastructure.csproj", "{25441BB2-BD14-4FF7-9DA3-E70B9D4BF30B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcerciseApp.Api", "ExcerciseApp.Api\ExcerciseApp.Api.csproj", "{71F165B0-3C7F-494A-B4F8-5B714363A094}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseApp.Api", "ExerciseApp.Api\ExerciseApp.Api.csproj", "{71F165B0-3C7F-494A-B4F8-5B714363A094}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 import { UPDATE_BOOKS, UPDATE_BOOK, UPDATE_BOOK_DETAILS, UPDATE_RENTED_BOOKS, ADD_RENTED_BOOK, SORT_BOOKS } from '../constants/actionTypes';
 import { API_URL } from '../constants/apiUrl';
 import axiosInstance from '../axios/config';
-import { UpdateRentingUsersRequest } from './users';
+import { UpdateRentingUsersRequest, UpdateUsersRequest } from './users';
 
 export function UpdateBooks(books){
     return {
@@ -132,6 +132,7 @@ export function PassBookInRequest(id){
             dispatch(UpdateRentedBooks(result.data))
             dispatch(UpdateRentingUsersRequest())
             dispatch(UpdateBooksRequest())
+            dispatch(UpdateUsersRequest())
         })
         .catch(err => {
             throw err
