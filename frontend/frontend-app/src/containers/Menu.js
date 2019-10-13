@@ -6,14 +6,14 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import UserTable from './UserTable';
+import UsersTable from './UsersTable';
 import BooksTable from './BooksTable';
 import RentedBooks from './RentedBooksTable';
 import RentingUsers from './RentingUsersTable';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { SetTabValue } from '../actions/tab';
-import TabPanel from './TabPanel';
+import TabPanel from '../components/TabPanel';
 
 function mapStateToProps(state) {
     return {
@@ -59,7 +59,7 @@ function Menu(props) {
         </Tabs>
       </AppBar>
       <TabPanel value={props.value} index={0}>
-        <UserTable/>
+        <UsersTable/>
       </TabPanel>
       <TabPanel value={props.value} index={1}>
         <RentingUsers/>

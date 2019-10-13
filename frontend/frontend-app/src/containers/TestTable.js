@@ -4,12 +4,6 @@ import MaterialTable from 'material-table'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-function mapStateToProps(state){
-    return {
-        users: state.users.users
-    }
-}
-
 function TestTable(props) {
     return (
       <div style={{ maxWidth: '100%' }}>
@@ -25,12 +19,15 @@ function TestTable(props) {
             { title: 'ModifiedDate', field: 'modifiedDate', type: 'datetime' },
             { title: 'Birth Date', field: 'birthDate', type: 'datetime'}
           ]}
-          data={props.users}
+          data={query => new Promise((resolve, reject) => {
+             resolve({
+               data: props.users,
+             })})}
           title="Demo Title"
         />
       </div>
     )
 }
 
-export default connect(mapStateToProps)(withRouter(TestTable))
+export default (withRouter(TestTable))
 

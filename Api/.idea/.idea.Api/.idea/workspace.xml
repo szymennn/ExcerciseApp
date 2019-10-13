@@ -2,59 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18dc68e-cf48-447d-aa8a-abf90bd9b2ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Api.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Api.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Controllers/BooksController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Controllers/RentalsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/ExcerciseApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/ExerciseApp.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Extensions/CustomExceptionHandlerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Extensions/CustomExceptionHandlerMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Extensions/HttpResponseExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Extensions/HttpResponseExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/MapperConfig/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/MapperConfig/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/BookApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookApiModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/BookBindingModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookBindingModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/BookDetailsApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookDetailsApiModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/BorrowApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowApiModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/BorrowBindingModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowBindingModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/UserApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserApiModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/UserBindingModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserBindingModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Dtos/UserDetailsApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserDetailsApiModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/BookDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/BookDetails.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/Borrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/Borrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/DictBookGenre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/DictBookGenre.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Entities/UserDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Entities/UserDetails.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Exceptions/BookAlreadyRentedException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Exceptions/BookAlreadyRentedException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Exceptions/ResourceNotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Exceptions/ResourceNotFoundException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Exceptions/UserNotActiveException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Exceptions/UserNotActiveException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/ExcerciseApp.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/ExerciseApp.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Helpers/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Helpers/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IBookInventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IBookInventoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IBookInventoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IBookInventoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IBookRentalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IBookRentalRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IBookRentalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IBookRentalService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IGenresRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IGenresRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IReportService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Interfaces/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Interfaces/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Services/BookInventoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Services/BookInventoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Services/BookRentalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Services/BookRentalService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Core/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Core/Services/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Data/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/ExcerciseApp.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/ExerciseApp.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Migrations/20191007084400_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Migrations/20191007084400_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Migrations/20191007084400_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Migrations/20191007084400_Initial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Repositories/BookInventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookInventoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Repositories/GenresRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcerciseApp.Infrastructure/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/EnhancedRentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/EnhancedRentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/RentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/RentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/TestTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/TestTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-app/src/containers/UserTable.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,77 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookApiModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <marker date="1570876122942" expanded="true" signature="47:486" ph="{...}" />
-                <marker date="1570876122942" expanded="true" signature="79:484" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookBindingModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-              <folding>
-                <marker date="1570876266763" expanded="true" signature="6:58" ph="..." />
-                <marker date="1570876266763" expanded="true" signature="92:652" ph="{...}" />
-                <marker date="1570876266763" expanded="true" signature="128:650" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookDetailsApiModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-              <folding>
-                <marker date="1570876309600" expanded="false" signature="6:47" ph="..." />
-                <marker date="1570876309600" expanded="true" signature="81:642" ph="{...}" />
-                <marker date="1570876309600" expanded="true" signature="120:640" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowApiModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding>
-                <marker date="1570876277077" expanded="true" signature="47:312" ph="{...}" />
-                <marker date="1570876277077" expanded="true" signature="81:310" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserApiModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-              <folding>
-                <marker date="1570876292810" expanded="true" signature="47:461" ph="{...}" />
-                <marker date="1570876292810" expanded="true" signature="79:459" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserBindingModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="32">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding>
                 <marker date="1570876296131" expanded="true" signature="6:58" ph="..." />
                 <marker date="1570876296131" expanded="true" signature="92:674" ph="{...}" />
@@ -146,42 +36,175 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookInventoryRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding>
+                <marker date="1570875622933" expanded="false" signature="6:264" ph="..." />
+                <marker date="1570875622933" expanded="true" signature="316:1972" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="386:1970" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="501:553" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="623:1020" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="745:851" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="1073:1552" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="1595:1659" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="1704:1964" ph="{...}" />
+                <marker date="1570875622933" expanded="true" signature="1771:1883" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+              <folding>
+                <marker date="1570875622902" expanded="false" signature="6:511" ph="..." />
+                <marker date="1570875622902" expanded="true" signature="539:2539" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="566:2537" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="625:688" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="810:1887" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="1102:1170" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="1968:2531" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="2015:2092" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="2109:2217" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="2264:2454" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding>
+                <marker date="1570875622902" expanded="true" signature="74:352" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="133:350" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="250:344" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <marker date="1570876297678" expanded="false" signature="6:183" ph="..." />
+                <marker date="1570876297678" expanded="true" signature="223:1927" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="316:1925" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="512:606" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="668:855" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="940:1214" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="1335:1600" ph="{...}" />
+                <marker date="1570876297678" expanded="true" signature="1707:1919" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding>
+                <marker date="1570876296213" expanded="true" signature="6:183" ph="..." />
+                <marker date="1570876296213" expanded="true" signature="222:1805" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="319:1803" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="511:605" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="679:867" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="943:1132" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="1233:1487" ph="{...}" />
+                <marker date="1570876296213" expanded="true" signature="1583:1797" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="74" column="86" selection-start-line="74" selection-start-column="86" selection-end-line="74" selection-end-column="86" />
+              <folding>
+                <marker date="1570972751832" expanded="false" signature="6:264" ph="..." />
+                <marker date="1570972751832" expanded="true" signature="316:4482" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="380:4480" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="493:545" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="614:711" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="764:819" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="873:1345" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1093:1301" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1204:1287" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1406:1550" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1619:1716" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1758:2156" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="1804:1916" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="2000:2058" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="2212:2666" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="2258:2370" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="2711:3000" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="2754:2827" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="3057:3592" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="3132:3244" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="3306:3416" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="3478:3582" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="3637:4179" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="4086:4143" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="4223:4303" ph="{...}" />
+                <marker date="1570972751832" expanded="true" signature="4352:4474" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerMiddleware.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="24" column="53" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="53" />
+              <folding>
+                <marker date="1570875622902" expanded="false" signature="6:230" ph="..." />
+                <marker date="1570875622902" expanded="true" signature="269:2127" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="321:2125" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="446:492" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="547:2119" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="622:701" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="718:784" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="848:1219" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="1292:1690" ph="{...}" />
+                <marker date="1570875622902" expanded="true" signature="1720:2109" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserDetailsApiModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="112">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <marker date="1570876296199" expanded="true" signature="6:96" ph="..." />
                 <marker date="1570876296199" expanded="true" signature="130:680" ph="{...}" />
                 <marker date="1570876296199" expanded="true" signature="169:678" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowBindingModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding>
-                <marker date="1570876288704" expanded="true" signature="6:58" ph="..." />
-                <marker date="1570876288704" expanded="true" signature="92:392" ph="{...}" />
-                <marker date="1570876288704" expanded="true" signature="130:390" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Entities/Book.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <marker date="1570875622918" expanded="false" signature="6:66" ph="..." />
-                <marker date="1570875622918" expanded="true" signature="104:535" ph="{...}" />
-                <marker date="1570875622918" expanded="true" signature="128:533" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -193,13 +216,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/MapperConfig/MappingProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookInventoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/HttpResponseExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Services/BookRentalService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Services/BookInventoryService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/MapperConfig/MappingProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Entities/Book.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Helpers/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowBindingModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -230,6 +261,9 @@
         <option value="$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserApiModel.cs" />
         <option value="$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserBindingModel.cs" />
         <option value="$PROJECT_DIR$/ExerciseApp.Api/appsettings.json" />
+        <option value="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs" />
+        <option value="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs" />
       </list>
     </option>
   </component>
@@ -252,7 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -263,13 +296,25 @@
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Api" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="ExerciseApp.Api" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ExerciseApp.Core" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Api" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ExerciseApp.Infrastructure" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Api" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ExerciseApp.Infrastructure" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
     </panes>
   </component>
@@ -335,12 +380,13 @@
       <option name="presentableId" value="Default" />
       <updated>1570875757607</updated>
       <workItem from="1570875764816" duration="315000" />
-      <workItem from="1570876091074" duration="1187000" />
+      <workItem from="1570876091074" duration="3694000" />
+      <workItem from="1570969624368" duration="969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1502000" />
+    <option name="totallyTimeSpent" value="4978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,8 +399,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20618008" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2088439" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Azure Explorer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -505,40 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <marker date="1570876296213" expanded="true" signature="6:183" ph="..." />
-            <marker date="1570876296213" expanded="true" signature="222:1805" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="319:1803" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="511:605" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="679:867" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="943:1132" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="1233:1487" ph="{...}" />
-            <marker date="1570876296213" expanded="true" signature="1583:1797" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1570876297678" expanded="false" signature="6:183" ph="..." />
-            <marker date="1570876297678" expanded="true" signature="223:1927" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="316:1925" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="512:606" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="668:855" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="940:1214" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="1335:1600" ph="{...}" />
-            <marker date="1570876297678" expanded="true" signature="1707:1919" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/UsersController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -583,7 +596,7 @@
     <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BookDetailsApiModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
             <marker date="1570876309600" expanded="false" signature="6:47" ph="..." />
             <marker date="1570876309600" expanded="true" signature="81:642" ph="{...}" />
@@ -607,7 +620,7 @@
     <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/BorrowBindingModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding>
             <marker date="1570876288704" expanded="true" signature="6:58" ph="..." />
             <marker date="1570876288704" expanded="true" signature="92:392" ph="{...}" />
@@ -630,10 +643,76 @@
     <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserApiModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding>
             <marker date="1570876292810" expanded="true" signature="47:461" ph="{...}" />
             <marker date="1570876292810" expanded="true" signature="79:459" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/UserRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <marker date="1570886991392" expanded="false" signature="6:264" ph="..." />
+            <marker date="1570886991392" expanded="true" signature="316:2567" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="368:2565" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="475:527" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="584:905" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="626:738" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="958:1162" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1000:1112" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1205:1259" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1304:1516" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1346:1458" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1569:1731" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1780:1867" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="1907:2027" ph="{...}" />
+            <marker date="1570886991392" expanded="true" signature="2083:2559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/GenresRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <marker date="1570886997710" expanded="false" signature="6:142" ph="..." />
+            <marker date="1570886997710" expanded="true" signature="194:603" ph="{...}" />
+            <marker date="1570886997710" expanded="true" signature="250:601" ph="{...}" />
+            <marker date="1570886997710" expanded="true" signature="359:411" ph="{...}" />
+            <marker date="1570886997710" expanded="true" signature="460:595" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/HttpResponseExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <marker date="1570875622902" expanded="false" signature="6:115" ph="..." />
+            <marker date="1570875622902" expanded="true" signature="154:963" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="203:961" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="297:365" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="469:955" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="654:945" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="740:931" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserBindingModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <marker date="1570876296131" expanded="true" signature="6:58" ph="..." />
+            <marker date="1570876296131" expanded="true" signature="92:674" ph="{...}" />
+            <marker date="1570876296131" expanded="true" signature="128:672" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -645,10 +724,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookInventoryRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1570875622933" expanded="false" signature="6:264" ph="..." />
+            <marker date="1570875622933" expanded="true" signature="316:1972" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="386:1970" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="501:553" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="623:1020" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="745:851" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="1073:1552" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="1595:1659" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="1704:1964" ph="{...}" />
+            <marker date="1570875622933" expanded="true" signature="1771:1883" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding>
+            <marker date="1570875622902" expanded="false" signature="6:511" ph="..." />
+            <marker date="1570875622902" expanded="true" signature="539:2539" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="566:2537" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="625:688" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="810:1887" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="1102:1170" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="1968:2531" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="2015:2092" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="2109:2217" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="2264:2454" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <marker date="1570875622902" expanded="true" signature="74:352" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="133:350" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="250:344" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/BooksController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <marker date="1570876297678" expanded="false" signature="6:183" ph="..." />
+            <marker date="1570876297678" expanded="true" signature="223:1927" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="316:1925" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="512:606" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="668:855" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="940:1214" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="1335:1600" ph="{...}" />
+            <marker date="1570876297678" expanded="true" signature="1707:1919" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Extensions/CustomExceptionHandlerMiddleware.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <marker date="1570875622902" expanded="false" signature="6:230" ph="..." />
+            <marker date="1570875622902" expanded="true" signature="269:2127" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="321:2125" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="446:492" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="547:2119" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="622:701" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="718:784" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="848:1219" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="1292:1690" ph="{...}" />
+            <marker date="1570875622902" expanded="true" signature="1720:2109" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserDetailsApiModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="112">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <marker date="1570876296199" expanded="true" signature="6:96" ph="..." />
             <marker date="1570876296199" expanded="true" signature="130:680" ph="{...}" />
@@ -657,14 +822,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExerciseApp.Core/Dtos/UserBindingModel.cs">
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Api/Controllers/RentalsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="112">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <marker date="1570876296131" expanded="true" signature="6:58" ph="..." />
-            <marker date="1570876296131" expanded="true" signature="92:674" ph="{...}" />
-            <marker date="1570876296131" expanded="true" signature="128:672" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="6:183" ph="..." />
+            <marker date="1570876296213" expanded="true" signature="222:1805" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="319:1803" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="511:605" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="679:867" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="943:1132" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="1233:1487" ph="{...}" />
+            <marker date="1570876296213" expanded="true" signature="1583:1797" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseApp.Infrastructure/Repositories/BookRentalRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="74" column="86" selection-start-line="74" selection-start-column="86" selection-end-line="74" selection-end-column="86" />
+          <folding>
+            <marker date="1570972751832" expanded="false" signature="6:264" ph="..." />
+            <marker date="1570972751832" expanded="true" signature="316:4482" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="380:4480" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="493:545" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="614:711" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="764:819" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="873:1345" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1093:1301" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1204:1287" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1406:1550" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1619:1716" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1758:2156" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="1804:1916" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="2000:2058" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="2212:2666" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="2258:2370" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="2711:3000" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="2754:2827" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="3057:3592" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="3132:3244" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="3306:3416" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="3478:3582" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="3637:4179" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="4086:4143" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="4223:4303" ph="{...}" />
+            <marker date="1570972751832" expanded="true" signature="4352:4474" ph="{...}" />
           </folding>
         </state>
       </provider>

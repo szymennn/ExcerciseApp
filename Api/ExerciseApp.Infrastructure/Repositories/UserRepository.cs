@@ -69,11 +69,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
 
         private bool Exist(int userId)
         {
-            if (_context.Users.Any(p => p.Id == userId))
-            {
-                return _context.Users.Find(userId).IsActive;
-            }
-            return false;
+            return _context.Users.Any(p => p.Id == userId) && _context.Users.Find(userId).IsActive;
         }
 
         private User Edit(User userToEdit, int userId)

@@ -8,7 +8,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
 {
     public class GenresRepository : IGenresRepository
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
 
         public GenresRepository(AppDbContext context)
         {

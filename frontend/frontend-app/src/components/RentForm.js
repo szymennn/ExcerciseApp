@@ -1,19 +1,22 @@
 import React from 'react';
 import { TextField, Button } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import { RentBookRequest} from '../actions/index';
 
 export default function RentForm(props) {
     const { values, touched, errors, handleChange, handleBlur, handleSubmit } = props
 
-    const bookOptions = props.books.map((book) => {
+    const bookItems = props.books.map((book) => {
         return (
-            <option value={book.id}>{book.title}</option>
+            <MenuItem value={book.Id}>{book.title}</MenuItem>
         )
-    })  
+    })
 
-    const userOptions = props.users.map((user) => {
+    const userItems = props.users.map((user) => {
         return (
-            <option value={user.id}>{user.firstName} {user.lastName}</option>
+            <MenuItem value={user.Id}>{user.firstName} {user.lastName}</MenuItem>
         )
     })
 
@@ -31,26 +34,28 @@ export default function RentForm(props) {
                 fullWidth
              />
             {/* <Select
-            native
-            value=''
-            inputProps={{
-                name: 'name',
-                id: 'id'
-            }}
+                fullWidth
+                value={bookId}
+                onChange={handleBookId}
+                inputProps={{
+                name: 'bookId',
+                id: 'book-simple',
+                }}
             >
-            {bookOptions}
+            {bookItems}
             </Select>
+            <InputLabel htmlFor="user-simple">Users</InputLabel>
             <Select
-            native
-            value=''
-            inputProps={{
-                name: 'name',
-                id: 'id'
-            }}
+                fullWidth
+                value={userId}
+                onChange={handleUserId}
+                inputProps={{
+                name: 'userId',
+                id: 'user-simple',
+                }}
             >
-            {userOptions}
-            </Select>
-        */}
+            {userItems}
+            </Select>              */}
             {<TextField
                 error={errors.userId && touched.userId}
                 id="userId"
@@ -91,7 +96,7 @@ export default function RentForm(props) {
                     shrink: true,
                   }}
                 fullWidth
-            />            
+            />           
             <Button
                 type="submit"
                 fullWidth

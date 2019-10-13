@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { Table, TableBody, TableHead, TableCell, TableRow, Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Book from './Book';
 import { UpdateRentedBooksRequest, UpdateBookDetailsRequest } from '../actions/index';
-import EnhancedRentForm from './EnhancedRentForm';
+import EnhancedRentForm from '../components/EnhancedRentForm';
 
 function mapStateToProps(state){
     return {

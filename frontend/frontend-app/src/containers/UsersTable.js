@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import axiosInstance from '../axios/config';
 import { UpdateUsersRequest, DeleteUser, SetUpdateId, UpdateUserDetailsRequest, SortUsers } from '../actions/index';
 import { withRouter } from 'react-router-dom';
-import User from './User';
+import User from '../components/User';
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import SortIcon from '@material-ui/icons/Sort';
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     },
   });
 
-function UserTable(props) {
+function UsersTable(props) {
     const classes = useStyles();
 
     useEffect(() => {
@@ -65,14 +65,9 @@ function UserTable(props) {
         )
     })
 
-    const selectFilter = [
-        {Name: 'estado'},
-        {Name: 'something'}
-    ]
-
     return (
     <Paper className={classes.root}>
-     <Table selectFilter={selectFilter} className={classes.table} aria-label="Users">
+     <Table className={classes.table} aria-label="Users">
         <TableHead>
             <TableRow>
             <TableCell>Id</TableCell>
@@ -105,4 +100,4 @@ function UserTable(props) {
     );
 }
 
-export default connect(mapStateToProps)(withRouter(UserTable))
+export default connect(mapStateToProps)(withRouter(UsersTable))

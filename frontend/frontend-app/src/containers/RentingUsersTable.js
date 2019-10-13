@@ -4,7 +4,6 @@ import InfoIcon from '@material-ui/icons/Info';
 import { connect } from 'react-redux';
 import { UpdateUsersRequest, DeleteUser, SetUpdateId, UpdateUserDetailsRequest, UpdateRentingUsersRequest } from '../actions/index';
 import { withRouter } from 'react-router-dom';
-import User from './User';
 
 function mapStateToProps(state){
     return {

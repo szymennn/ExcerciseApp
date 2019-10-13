@@ -1,6 +1,6 @@
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
-import RentForm from '../containers/RentForm';
+import RentForm from './RentForm';
 import { RentBookRequest } from '../actions';
 
 const EnhancedRentForm = withFormik({
@@ -22,8 +22,8 @@ const EnhancedRentForm = withFormik({
         props.dispatch(RentBookRequest(rental, props.redirect))
     },
     validationSchema: Yup.object().shape({
-        bookId: Yup.number().required(),
-        userId: Yup.number().required(),
+        bookId: Yup.number(),
+        userId: Yup.number(),
         fromDate: Yup.date().required(),
         toDate: Yup.date().required()
     })

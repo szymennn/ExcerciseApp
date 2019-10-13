@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import EnhancedEditForm from './EnhancedEditForm';
+import EnhancedEditForm from '../components/EnhancedEditForm';
 
 function mapStateToProps(state){
     return {

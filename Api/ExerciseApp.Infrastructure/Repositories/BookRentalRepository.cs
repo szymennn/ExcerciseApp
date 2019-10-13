@@ -35,7 +35,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
             var activeUserIds = new List<int>();
             foreach(var userId in userIds)
             {
-                if (_context.Users.Find(userId).IsActive && !activeUserIds.Any(p => p == userId))
+                if (_context.Users.Find(userId).IsActive && activeUserIds.All(p => p != userId))
                 {
                     activeUserIds.Add(userId);
                 }
@@ -72,7 +72,7 @@ namespace ExcerciseApp.Infrastructure.Repositories
             {
                 throw new ResourceNotFoundException(Constants.BookNotFoundMessage);
             }
-            var borrow = _context.Borrows.LastOrDefault(p => p.BookId == bookId);
+            var borrow = _context.Borrows.LastOrDefault(p => p.BookId == bookId && !p.IsReturned);
             var book = _context.Books.Find(bookId);
             book.Count++;
             borrow.IsReturned = true;

@@ -1,7 +1,7 @@
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
+import BookForm from './BookForm';
 import { EditBook } from '../actions';
-import BookForm from '../components/BookForm';
 
 const EnhancedEditBookForm = withFormik({
     mapPropsToValues(props){

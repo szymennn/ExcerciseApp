@@ -4,7 +4,6 @@ import InfoIcon from '@material-ui/icons/Info';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Book from './Book';
 import { UpdateRentedBooksRequest, UpdateBookDetailsRequest, PassBookInRequest } from '../actions/index';
 
 function mapStateToProps(state){

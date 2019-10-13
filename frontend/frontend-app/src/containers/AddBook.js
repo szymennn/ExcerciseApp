@@ -1,5 +1,5 @@
 import React from 'react';
-import EnhancedAddBookForm from './EnhancedAddBookForm';
+import EnhancedAddBookForm from '../components/EnhancedAddBookForm';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 

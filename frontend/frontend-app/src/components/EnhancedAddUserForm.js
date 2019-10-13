@@ -5,7 +5,7 @@ import { AddUser } from '../actions/users';
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
-const EnhancedUserForm = withFormik({
+const EnhancedAddUserForm = withFormik({
     mapPropsToValues(){
         return {
             firstName: '',
@@ -40,4 +40,4 @@ const EnhancedUserForm = withFormik({
     })
 })(UserForm)
 
-export default EnhancedUserForm
+export default EnhancedAddUserForm

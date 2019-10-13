@@ -3,7 +3,7 @@ import { Table, TableBody, TableHead, TableCell, TableRow, Button, makeStyles, I
 import AddIcon from '@material-ui/icons/Add';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Book from './Book';
+import Book from '../components/Book';
 import { UpdateBooksRequest, SetUpdateId, UpdateBookDetailsRequest, SortBooks, SetFilter, SetAnchorE1 } from '../actions/index';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import SortIcon from '@material-ui/icons/Sort';
