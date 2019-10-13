@@ -14,10 +14,12 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { SetTabValue } from '../actions/tab';
 import TabPanel from '../components/TabPanel';
+import TestTable from './TestTable';
 
 function mapStateToProps(state) {
     return {
-        value: state.tab.value
+        value: state.tab.value,
+        users: state.users.users
     }
 }
 
@@ -56,6 +58,7 @@ function Menu(props) {
           <Tab label="Renting Users" {...a11yProps(1)} />
           <Tab label="Books" {...a11yProps(2)} />
           <Tab label="Rented Books" {...a11yProps(3)} />
+          <Tab label="Test Table" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={props.value} index={0}>
@@ -69,6 +72,9 @@ function Menu(props) {
       </TabPanel>
       <TabPanel value={props.value} index={3}>
         <RentedBooks/>
+      </TabPanel>
+      <TabPanel value={props.value} index={4}>
+        <TestTable users={props.users}/>
       </TabPanel>
     </div>
   );
