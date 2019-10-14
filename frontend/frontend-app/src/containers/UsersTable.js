@@ -31,11 +31,11 @@ function UsersTable(props) {
     const classes = useStyles();
 
     useEffect(() => {
-            props.dispatch(UpdateUsersRequest())
+            props.dispatch(UpdateUsersRequest(props.history.push))
     },[])
 
     function handleDelete(id){
-        props.dispatch(DeleteUser(id))
+        props.dispatch(DeleteUser(id, props.history.push))
     }
 
     function handleAdd(){

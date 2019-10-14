@@ -27,7 +27,7 @@ const EnhancedAddBookForm = withFormik({
             addDate: values.addDate,
             modifiedDate: values.modifiedDate,
         }
-        props.dispatch(AddBook(book))
+        props.dispatch(AddBook(book, props.redirect))
         props.redirect('/')
     },
     validationSchema: Yup.object().shape({

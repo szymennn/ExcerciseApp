@@ -2,6 +2,7 @@ import { UPDATE_BOOKS, UPDATE_BOOK, UPDATE_BOOK_DETAILS, UPDATE_RENTED_BOOKS, AD
 import { API_URL } from '../constants/apiUrl';
 import axiosInstance from '../axios/config';
 import { UpdateRentingUsersRequest, UpdateUsersRequest } from './users';
+import { SetUpError } from './error';
 
 export function UpdateBooks(books){
     return {
@@ -45,26 +46,28 @@ export function SortBooks(){
     }
 }
 
-export function UpdateBooksRequest(){
+export function UpdateBooksRequest(redirect){
     return (dispatch) => {
         return axiosInstance.get(`${API_URL}/books`)
         .then(result => {
             dispatch(UpdateBooks(result.data))
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
 
-export function AddBook(book){
+export function AddBook(book, redirect){
     return (dispatch) => {
         return axiosInstance.post(`${API_URL}/books`, book)
         .then(result => {
             dispatch(UpdateBooks(result.data))
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
@@ -81,8 +84,9 @@ export function EditBook(book, id, redirect){
             dispatch(UpdateBook(result.data))
             redirect('/Books')
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
@@ -94,20 +98,22 @@ export function UpdateBookDetailsRequest(id, redirect){
             dispatch(UpdateBookDetails(result.data))
             redirect('/RentedBookDetails')
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
 
-export function UpdateRentedBooksRequest(){
+export function UpdateRentedBooksRequest(redirect){
     return(dispatch) => {
         return axiosInstance.get(`${API_URL}/rentals/books`)
         .then(result => {
             dispatch(UpdateRentedBooks(result.data))
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
@@ -116,29 +122,31 @@ export function RentBookRequest(rental, redirect){
     return(dispatch) => {
         return axiosInstance.post(`${API_URL}/rentals`, rental)
         .then(result => {
-            dispatch(UpdateRentedBooksRequest())
-            dispatch(UpdateRentingUsersRequest())
-            dispatch(UpdateUsersRequest())
-            dispatch(UpdateBooksRequest())
+            dispatch(UpdateRentedBooksRequest(redirect))
+            dispatch(UpdateRentingUsersRequest(redirect))
+            dispatch(UpdateUsersRequest(redirect))
+            dispatch(UpdateBooksRequest(redirect))
             redirect('/')
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }
 
-export function PassBookInRequest(id){
+export function PassBookInRequest(id, redirect){
     return(dispatch) => {
         return axiosInstance.post(`${API_URL}/rentals/${id}`)
         .then(result => {
             dispatch(UpdateRentedBooks(result.data))
-            dispatch(UpdateRentingUsersRequest())
-            dispatch(UpdateBooksRequest())
-            dispatch(UpdateUsersRequest())
+            dispatch(UpdateRentingUsersRequest(redirect))
+            dispatch(UpdateBooksRequest(redirect))
+            dispatch(UpdateUsersRequest(redirect))
         })
-        .catch(err => {
-            throw err
+        .catch(error => {
+            dispatch(SetUpError(error.response.data))
+            redirect('/Error')
         })
     }
 }

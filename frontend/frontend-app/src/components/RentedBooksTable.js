@@ -11,7 +11,7 @@ function RentedBooksTable(props) {
     }
 
     function handlePassIn(id){
-        props.dispatch(PassBookInRequest(id))
+        props.dispatch(PassBookInRequest(id, props.history.push))
     }
 
     const formattedDateBooks = props.books.map((book) => {

@@ -1,6 +1,7 @@
 import { UPDATE_USERS, UPDATE_USER, UPDATE_USER_DETAILS, UPDATE_RENTING_USERS, SORT_USERS } from '../constants/actionTypes';
 import { API_URL } from '../constants/apiUrl';
 import axiosInstance from '../axios/config';
+import { SetUpError } from './error';
 
 export function UpdateUsers(users){
     return {
@@ -35,14 +36,24 @@ export function SortUsers(){
     }
 }
 
-export function UpdateUsersRequest(){
+export function UpdateUserDetails(userDetails){
+    return {
+        type: UPDATE_USER_DETAILS,
+        payload: {
+            userDetails: userDetails
+        }
+    }
+}
+
+export function UpdateUsersRequest(redirect){
     return (dispatch) => {
         return axiosInstance.get(`${API_URL}/users`)
         .then(result => {
             dispatch(UpdateUsers(result.data))
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
     }
 }
@@ -55,19 +66,21 @@ export function AddUser(user, redirect){
             redirect('/')
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
     }
 }
 
-export function DeleteUser(id){
+export function DeleteUser(id, redirect){
     return (dispatch) => {
         return axiosInstance.delete(`${API_URL}/users/${id}`)
         .then(result => {
             dispatch(UpdateUsers(result.data))
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
     }
 }
@@ -80,17 +93,9 @@ export function EditUserRequest(user, id, redirect){
             redirect('/')
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
-    }
-}
-
-export function UpdateUserDetails(userDetails){
-    return {
-        type: UPDATE_USER_DETAILS,
-        payload: {
-            userDetails: userDetails
-        }
     }
 }
 
@@ -102,19 +107,21 @@ export function UpdateUserDetailsRequest(id, redirect) {
             redirect('/UserDetails')
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
     }
 }
 
-export function UpdateRentingUsersRequest(){
+export function UpdateRentingUsersRequest(redirect){
     return (dispatch) => {
         return axiosInstance.get(`${API_URL}/rentals/users`)
         .then(result => {
             dispatch(UpdateRentingUsers(result.data))
         })
         .catch(err => {
-            throw err
+            dispatch(SetUpError(err.response.data))
+            redirect('/Error')
         })
     }
 }

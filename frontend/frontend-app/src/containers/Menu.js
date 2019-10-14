@@ -48,10 +48,10 @@ function Menu(props) {
   const classes = useStyles();
 
   useEffect(() => {
-    props.dispatch(UpdateUsersRequest())
-    props.dispatch(UpdateBooksRequest())
-    props.dispatch(UpdateRentedBooksRequest())
-    props.dispatch(UpdateRentingUsersRequest())
+    props.dispatch(UpdateUsersRequest(props.history.push))
+    props.dispatch(UpdateBooksRequest(props.history.push))
+    props.dispatch(UpdateRentedBooksRequest(props.history.push))
+    props.dispatch(UpdateRentingUsersRequest(props.history.push))
   },[])
 
   const handleChange = (event, newValue) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField, Button } from '@material-ui/core';
 
 export default function UserForm(props) {
-    const { values, touched, errors, dirty, isSubmitting, handleChange, handleBlur, handleSubmit, handleReset } = props
+    const { values, touched, errors, handleChange, handleBlur, handleSubmit } = props
 
     return(
         <form onSubmit={handleSubmit}>

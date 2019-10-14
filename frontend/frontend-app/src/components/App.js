@@ -12,8 +12,7 @@ import Rent from '../containers/Rent';
 import RentedBookDetails from '../containers/RentedBookDetails';
 import Menu from '../containers/Menu';
 import UsersTable from '../containers/UsersTable';
-import SimpleSelect from '../containers/material';
-
+import ErrorStatusCodeHandler from '../containers/ErrorHandler';
 
 export default function App(props){
     return(
@@ -28,7 +27,7 @@ export default function App(props){
                 <Route path="/BookDetails" component={BookDetails}/>
                 <Route path="/Rent" component={Rent}/>
                 <Route path="/RentedBookDetails" component={RentedBookDetails}/>
-                <Route path="/SelectTest" component={SimpleSelect}/>
+                <Route path="/Error" component={ErrorStatusCodeHandler}/>
                 <Route path="/" component={Menu}/>
             </Switch>
         </BrowserRouter>

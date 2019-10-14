@@ -12,3 +12,4 @@ export const SET_TAB_VALUE = "SET_TAB_VALUE";
 export const SORT_BOOKS = "SORT_BOOKS";
 export const SORT_USERS = "SORT_USERS";
 export const SET_FILTER = "SET_FILTER";
+export const SET_UP_ERROR = "SET_ERROR";

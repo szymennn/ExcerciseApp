@@ -8,7 +8,7 @@ import { DeleteUser, SetUpdateId, UpdateUserDetailsRequest, SortUsers } from '..
 
 function UsersTable(props) {
     function handleDelete(id){
-      props.dispatch(DeleteUser(id))
+      props.dispatch(DeleteUser(id, props.history.push))
     }
 
     function handleAdd(){
@@ -94,7 +94,6 @@ function UsersTable(props) {
               icon: 'edit',
               tooltip: 'Edit User',
               onClick: (event, rowData)=>{
-                console.log(rowData)
                 handleEdit(rowData.id)
               }
             },
@@ -102,10 +101,6 @@ function UsersTable(props) {
               icon: 'info',
               tooltip: 'User Info',
               onClick: (event, rowData)=>{
-                const user = props.users.find((user) => {
-                  return user.id === rowData.id
-                })   
-                console.log(user)
                 handleDetails(rowData.id)
               }
             }
