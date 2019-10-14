@@ -117,6 +117,9 @@ export function RentBookRequest(rental, redirect){
         return axiosInstance.post(`${API_URL}/rentals`, rental)
         .then(result => {
             dispatch(UpdateRentedBooksRequest())
+            dispatch(UpdateRentingUsersRequest())
+            dispatch(UpdateUsersRequest())
+            dispatch(UpdateBooksRequest())
             redirect('/')
         })
         .catch(err => {

@@ -3,7 +3,7 @@ import { Table, TableBody, TableHead, TableCell, TableRow, Button } from '@mater
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { UpdateRentedBooksRequest, UpdateBookDetailsRequest } from '../actions/index';
-import EnhancedRentForm from '../components/EnhancedRentForm';
+import RentForm from '../components/RentForm';
 
 function mapStateToProps(state){
     return {
@@ -14,7 +14,7 @@ function mapStateToProps(state){
 
 function Rent(props) {
     return(
-        <EnhancedRentForm dispatch={props.dispatch} redirect={props.history.push} books={props.books} users={props.users}/>
+        <RentForm dispatch={props.dispatch} redirect={props.history.push} books={props.books} users={props.users}/>
     )
 }
 

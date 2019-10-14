@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import UsersTable from './UsersTable';
-import BooksTable from './BooksTable';
-import RentedBooks from './RentedBooksTable';
-import RentingUsers from './RentingUsersTable';
+import BooksTable from '../components/BooksTable';
+import RentedBooksTable from '../components/RentedBooksTable';
+import RentingUsersTable from '../components/RentingUsersTable';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { SetTabValue } from '../actions/tab';
 import TabPanel from '../components/TabPanel';
-import TestTable from './TestTable';
+import UsersTable from '../components/UsersTable'
+import { UpdateUsersRequest, UpdateBooksRequest, UpdateRentedBooksRequest, UpdateRentingUsersRequest } from '../actions/index';
 
 function mapStateToProps(state) {
     return {
         value: state.tab.value,
-        users: state.users.users
+        users: state.users.users,
+        books: state.books.books,
+        rentingUsers: state.users.renting,
+        rentedBooks: state.books.rented
     }
 }
 
@@ -46,6 +47,13 @@ const useStyles = makeStyles(theme => ({
 function Menu(props) {
   const classes = useStyles();
 
+  useEffect(() => {
+    props.dispatch(UpdateUsersRequest())
+    props.dispatch(UpdateBooksRequest())
+    props.dispatch(UpdateRentedBooksRequest())
+    props.dispatch(UpdateRentingUsersRequest())
+  },[])
+
   const handleChange = (event, newValue) => {
     props.dispatch(SetTabValue(newValue))
   };
@@ -58,23 +66,19 @@ function Menu(props) {
           <Tab label="Renting Users" {...a11yProps(1)} />
           <Tab label="Books" {...a11yProps(2)} />
           <Tab label="Rented Books" {...a11yProps(3)} />
-          <Tab label="Test Table" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={props.value} index={0}>
-        <UsersTable/>
+        <UsersTable users={props.users} dispatch={props.dispatch}/>
       </TabPanel>
       <TabPanel value={props.value} index={1}>
-        <RentingUsers/>
+        <RentingUsersTable users={props.rentingUsers} dispatch={props.dispatch}/>
       </TabPanel>
       <TabPanel value={props.value} index={2}>
-        <BooksTable/>
+        <BooksTable books={props.books} dispatch={props.dispatch}/>
       </TabPanel>
       <TabPanel value={props.value} index={3}>
-        <RentedBooks/>
-      </TabPanel>
-      <TabPanel value={props.value} index={4}>
-        <TestTable users={props.users}/>
+        <RentedBooksTable books={props.rentedBooks} dispatch={props.dispatch}/>
       </TabPanel>
     </div>
   );
